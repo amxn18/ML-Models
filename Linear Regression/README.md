@@ -37,8 +37,7 @@ The dataset used is a simple CSV file: `data.csv`, which contains:
 
 ### 📘 Formula
 
-\[
-y= w/x + b
+y= w.x + b
 
 - Where:
   - \( w \) is the weight (slope)
