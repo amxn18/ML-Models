@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 📈 Custom Linear Regression vs Scikit-learn
 
 This project demonstrates a **custom implementation** of Linear Regression using **Gradient Descent**, and compares its performance with **Scikit-learn's LinearRegression**.
