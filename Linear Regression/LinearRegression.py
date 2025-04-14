@@ -8,6 +8,7 @@ class linearRegression:
         self.iterations = iterations
 
     def fit(self, x, y):
+        # m --> No of data points  and n --> no of features 
         self.m, self.n = x.shape  #(30x1)
         self.w = np.zeros(self.n)
         self.b = 0
