@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
-# 🌟 Locally Weighted Linear Regression (LWR) from scratch
 class LWR:
     def __init__(self, tau=0.5):
         self.tau = tau  # Bandwidth (controls locality)
