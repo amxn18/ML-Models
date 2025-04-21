@@ -15,7 +15,7 @@ class linearRegression:
         self.x = x
         self.y = y
 
-        for _ in range(self.iterations):
+        for i in range(self.iterations):
             self.updateWeights()
 
     def updateWeights(self):
