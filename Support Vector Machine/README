@@ -1,4 +1,4 @@
-# 📊 **SVM Model from Scratch vs Sklearn SVC Comparison**
+# 📊 SVM Model from Scratch vs Sklearn SVC Comparison
 
 ## 🧠 **Overview:**
 This project focuses on building a **Support Vector Machine (SVM)** from scratch and comparing its performance with the **SVC model** from `sklearn`. We evaluate both models on the **training and testing accuracies** using a given dataset and compare their results to see how well the custom-built SVM can perform relative to the well-optimized sklearn implementation.
