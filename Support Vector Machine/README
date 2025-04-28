@@ -1,0 +1,62 @@
+# 📊 **SVM Model from Scratch vs Sklearn SVC Comparison**
+
+## 🧠 **Overview:**
+This project focuses on building a **Support Vector Machine (SVM)** from scratch and comparing its performance with the **SVC model** from `sklearn`. We evaluate both models on the **training and testing accuracies** using a given dataset and compare their results to see how well the custom-built SVM can perform relative to the well-optimized sklearn implementation.
+
+## ⚙️ **Dependencies:**
+To run this project, you'll need the following Python packages:
+- `numpy`: For mathematical operations and array manipulations.
+- `pandas`: For data manipulation and analysis.
+- `sklearn`: For machine learning tools, including the `SVC` model.
+- `matplotlib`: For data visualization and plotting.
+
+## ⚡ **Key Parameters:**
+- **Learning Rate (α):** This controls the step size in the gradient descent optimization process. A smaller learning rate might make convergence slower, while a larger learning rate might overshoot the optimal solution.
+- **Iterations (T):** The number of iterations for updating weights using gradient descent. More iterations typically lead to better convergence, but it also increases computational time.
+- **Lambda (λ):** The **regularization parameter** that balances between **margin maximization** and **minimizing classification errors**. A small λ leads to overfitting, while a large λ might underfit.
+- **Tolerance (ε):** This value is used to determine when to stop the optimization process. If the weights do not change significantly between iterations (within the tolerance), the training is considered converged.
+
+## 🔨 **Steps Involved:**
+1. **Data Preprocessing:** 
+   - The dataset is loaded, and we separate the features (x) from the labels (y).
+   - The data is then split into **training** and **testing sets** using `train_test_split` from `sklearn`.
+
+2. **Model Initialization:**
+   - We initialize two models:
+     - **Custom SVM**: This is the SVM implementation built from scratch using **gradient descent**.
+     - **Sklearn SVC**: This is the built-in **Support Vector Classification** model from `sklearn` with a linear kernel.
+
+3. **Training:**
+   - Both models are trained using the **training dataset** (x_train, y_train).
+   - The custom SVM model adjusts weights using gradient descent, while the sklearn model is trained using the efficient optimizations within `SVC`.
+
+4. **Prediction:**
+   - Both models make predictions using the **training** and **testing** data.
+   - The predictions are compared with the actual values to determine accuracy.
+
+5. **Comparison:**
+   - After the models are trained and predictions are made, we compare their **accuracy scores** on both **training** and **testing** data.
+   - This comparison helps us analyze how well the custom model stacks up against the efficient sklearn implementation.
+
+## 📈 **Results and Visualization:**
+- **Model 1 (Custom SVM):**
+  - Training Accuracy: Measures how well the model fits the training data.
+  - Testing Accuracy: Evaluates how well the model generalizes to unseen data (testing set).
+  
+- **Model 2 (Sklearn SVC):**
+  - Similar to Model 1, but based on a highly optimized implementation from `sklearn`.
+
+We also visualize the results through plots, showing the comparison between the accuracies of the custom SVM and the sklearn SVC.
+
+## ✅ **Conclusion:**
+While the custom SVM model provides good insights into the mechanics of SVM, the **sklearn SVC model** often yields **better results** due to optimized algorithms and features like the **SMO (Sequential Minimal Optimization)**, which is used to solve the quadratic programming problem in SVM training.
+
+## ⚠️ **Why the Custom Model Performs Poorly:**
+Despite implementing SVM from scratch, the custom model tends to perform worse than the `sklearn` SVC model due to several reasons:
+1. **Optimization Efficiency:** `sklearn` uses a more advanced optimization algorithm like **SMO**, which is significantly faster and more efficient than the basic gradient descent used in the custom model.
+2. **Regularization & Hyperparameter Tuning:** The custom model may not be optimally tuned, especially with respect to the **learning rate** and **regularization parameters**. The sklearn implementation benefits from automatic tuning and optimizations that provide better generalization.
+3. **Computational Efficiency:** The custom implementation may not handle large datasets or high-dimensional data as effectively as the sklearn model, which is optimized for such tasks.
+
+These factors contribute to the low training and testing accuracy of the custom model when compared to the `sklearn` model.
+
+
