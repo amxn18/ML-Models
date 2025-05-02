@@ -1,0 +1,116 @@
+# 🧠 K-Nearest Neighbors (KNN) Classifier - From Scratch
+
+This project demonstrates the implementation of the K-Nearest Neighbors (KNN) classification algorithm **from scratch in Python** and compares it with **scikit-learn's built-in KNN** model using the Iris dataset. It also includes visual performance comparisons through confusion matrices.
+
+---
+
+## 📌 Algorithm: KNN
+
+K-Nearest Neighbors is a **non-parametric**, **instance-based** learning algorithm. It classifies new data points based on **similarity (distance)** to the majority class among its `k` nearest neighbors in the training data.
+
+---
+
+## 🧮 Mathematics Used
+
+- **Distance Metrics**:
+  - 📏 **Euclidean Distance**  
+    \[
+    d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + \ldots}
+    \]
+  - 🏙️ **Manhattan Distance**  
+    \[
+    d = |x_1 - x_2| + |y_1 - y_2| + \ldots
+    \]
+
+- **No gradient descent**, **no cost function**, and **no model fitting** like in other ML models. KNN is a lazy learner — it simply stores the training data and calculates distances at prediction time.
+
+---
+
+## 🗂 Dataset Used
+
+- **Iris Dataset** (from sklearn.datasets)
+- 3 Classes: Setosa, Versicolor, Virginica
+- 4 Features: Sepal Length, Sepal Width, Petal Length, Petal Width
+
+---
+
+## 🔧 Workflow
+
+1. **Load Dataset**
+2. **Split** into Train & Test sets (80-20)
+3. **Implement KNN from Scratch**
+4. **Compare** with sklearn's KNN
+5. **Evaluate Accuracy**
+6. **Plot Confusion Matrices**
+
+---
+
+## 🚀 Usage
+
+```python
+# Custom KNN Classifier
+model1 = KNNClassifier(distanceMetric="euclidean")
+model1.fit(X_train, y_train)
+y_pred_custom = model1.predict(X_test, k=3)
+
+# Sklearn KNN Classifier
+model2 = KNeighborsClassifier(n_neighbors=3)
+model2.fit(X_train, y_train)
+y_pred_sklearn = model2.predict(X_test)
+```
+
+---
+
+## 📊 Evaluation
+
+- ✅ **Accuracy (Custom KNN)**: ~95–100% (may vary)
+- ✅ **Accuracy (Sklearn KNN)**: ~95–100%
+- ✅ **Visual**: Confusion matrices plotted for both models using seaborn
+
+---
+
+## 📈 Confusion Matrix Sample Output
+
+Left = Custom KNN | Right = Sklearn KNN
+
+```text
+       Predicted
+        0  1  2
+Actual
+  0    ✔ ✔ ✔
+  1    ✔ ✔ ✔
+  2    ✔ ✔ ✔
+```
+
+---
+
+## 📁 Files Included
+
+- `knn_from_scratch.py` – Main code
+- `README.md` – This file
+
+---
+
+## ✅ Learnings
+
+- Difference between **lazy** (KNN) and **eager** (Logistic Regression, SVM) learning
+- Role of **distance metrics**
+- How KNN **does not train** the way parametric models do
+- Visualization of classification results
+
+---
+
+## 🧠 Future Ideas
+
+- Add support for **weighted KNN**
+- Add **cosine similarity** as a distance metric
+- Apply KNN to a **custom real-world dataset**
+
+---
+
+# 📌 Note:
+KNN works well for small datasets but may be slow for large datasets due to high prediction-time complexity:  
+- **Time Complexity**: O(n × d) per test sample (where n = training size, d = features)
+- **Space Complexity**: O(n × d)
+
+---
