@@ -6,10 +6,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 # Logistic Regression from Scratch
-class logisticRegression:
-    def __init__(self, learningRate, iterations):
+class LogisticRegression:
+    def __init__(self, learningRate, epochs):
         self.learningRate = learningRate
-        self.iterations = iterations
+        self.epochs = epochs
         self.loss_history = []
 
     def fit(self, x, y):
@@ -19,7 +19,7 @@ class logisticRegression:
         self.x = x
         self.y = y
 
-        for i in range(self.iterations):
+        for i in range(self.epochs):
             self.updateWeights()
 
             # Compute loss for current iteration
@@ -52,7 +52,7 @@ y = df['Outcome']
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
 # Train Custom Model
-model1 = logisticRegression(learningRate=0.1, iterations=10000)
+model1 = LogisticRegression(learningRate=0.1, epochs=10000)
 model1.fit(x_train.values, y_train.values)
 
 # Predict on Train and Test data
