@@ -1,8 +1,8 @@
-# 📊 Machine Learning Models
+#  Machine Learning Models
 
 This repository contains custom implementations of various machine learning models built from scratch. These models are implemented to demonstrate fundamental concepts, such as **Gradient Descent**, **Optimization**, and **Prediction**. Alongside custom implementations, **Scikit-learn** equivalents are also compared to validate the correctness of the models.
 
-## 🧑‍💻 Models Included:
+##  Models Included:
 - **Linear Regression**
 - **Logistic Regression**
 - **Lasso Regression**
@@ -12,13 +12,13 @@ This repository contains custom implementations of various machine learning mode
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 The datasets used in these models are synthetic or real-world datasets such as the **Iris dataset** for classification problems and custom data for regression problems. All datasets used are available in the respective model's folder.
 
 ---
 
-## 📈 Models Overview
+##  Models Overview
 
 ### 1. **Linear Regression**
 - A regression model that establishes a relationship between input features and continuous output. The model is trained using **Gradient Descent** to minimize the Mean Squared Error (MSE).
@@ -46,20 +46,20 @@ The datasets used in these models are synthetic or real-world datasets such as t
 
 ---
 
-# 📊 Evaluation Metrics
+# Evaluation Metrics
 All models are evaluated on the following metrics:
 - R² Score (Coefficient of Determination)
 - Mean Squared Error (MSE) for regression models
 - Accuracy for classification models
 
-# 📉 Visualizations
+# Visualizations
 Some models also include visualizations to display the results:
 - **Linear and Logistic Regression**: The fitted line is plotted against the actual data points.
 - **KNN**: Decision boundaries for classification problems are plotted.
 - **SVM**: The separating hyperplane is visualized.
 - **Lasso Regression**: Weights are plotted to observe feature importance.
 
-# 📁 Files in this Repository
+# Files in this Repository
 - `linear_regression.py` — Custom implementation of Linear Regression.
 - `logistic_regression.py` — Custom implementation of Logistic Regression.
 - `lasso_regression.py` — Custom implementation of Lasso Regression.
@@ -69,15 +69,10 @@ Some models also include visualizations to display the results:
 - `requirements.txt` — Python dependencies.
 - `data/` — Dataset files used for training and testing.
 
-# 💡 Future Enhancements
+#  Future Enhancements
 - [ ] Add **Cross-Validation** and **GridSearchCV** for hyperparameter tuning.
 - [ ] Extend models to handle **multi-class classification** and **multi-output regression**.
 - [ ] Improve **visualization** with interactive plots for better model understanding.
 - [ ] Implement models using **Stochastic Gradient Descent** (SGD).
 
-# 👨‍💻 Author
-Made with ❤️ as part of a **Machine Learning** and **Data Science** learning journey.
 
-Feel free to contribute, improve the models, or suggest improvements!
-
-EOF
