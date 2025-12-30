@@ -1,0 +1,23 @@
+.venv
+# MLflow local tracking
+mlruns/
+mlflow.db
+
+# Model artifacts
+model.pkl
+MLmodel
+conda.yaml
+python_env.yaml
+
+# Derived datasets
+X_train.csv
+X_test.csv
+y_train.csv
+y_test.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
