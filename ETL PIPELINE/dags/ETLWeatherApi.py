@@ -20,7 +20,7 @@ default_args = {
 with DAG(
     dag_id = 'etl_weather_api',
     default_args = default_args,
-    schedule_interval = '@daily',
+    schedule = '@daily',
     catchup = False) as dags:
 
     @task()
