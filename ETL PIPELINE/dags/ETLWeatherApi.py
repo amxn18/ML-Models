@@ -2,7 +2,7 @@ from airflow import DAG
 from airflow.providers.http.hooks.http import HttpHook 
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from airflow.decorators import task
-from airflow.utils.dates import days_ago 
+from datetime import datetime, timezone
 import requests
 import json 
 
@@ -13,7 +13,7 @@ API_CONN_ID = 'open_meteo_api'
 
 default_args = {
     'owner': 'airflow',
-    'start_date': days_ago(1),
+    'start_date': datetime(2024, 6, 1, tzinfo=timezone.utc),
 }
 
 # Defining the DAG
